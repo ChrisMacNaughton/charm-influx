@@ -2,7 +2,7 @@
 
 set -eux
 
-hostname=`unit-get public-address`
+hostname=`unit-get private-address`
 
 relation-set hostname=$hostname
 relation-set user=root
