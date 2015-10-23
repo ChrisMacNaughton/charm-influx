@@ -7,5 +7,5 @@ hostname=`unit-get public-address`
 relation-set hostname=$hostname
 relation-set user=root
 relation-set password=root
-relation-set port=8217
+relation-set port=8086
 
