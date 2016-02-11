@@ -3,7 +3,7 @@ set -ex
 sudo service influxdb restart
 
 for n in $(seq 30); do
-    nc -z localhost 8217 && break
+    nc -z localhost 8083 && break
     if [ $n -lt 30 ]; then
         echo "Service not running..... wait 10s"
     fi

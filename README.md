@@ -1,8 +1,6 @@
 # Overview
 
-InfluxDB is an open-source, distributed, time series database.  This charm
-is designed to act as a data source for the grafana charm: 
-cs:~cherylj/trusty/grafana
+InfluxDB is an open-source, distributed, time series database.
 
 This charm is a test and should not be used in production.
 
@@ -10,8 +8,8 @@ This charm is a test and should not be used in production.
 
 Deploy the grafana charm, and the required influxDB charm with the following:
 
-    juju deploy cs:~cherylj/trusty/grafana
-    juju deploy cs:~cherylj/trusty/influx
+    juju deploy cs:~chris.macnaughton/trusty/grafana
+    juju deploy cs:~chris.macnaughton/trusty/influx
 
 Add the relation between the two charms:
 
