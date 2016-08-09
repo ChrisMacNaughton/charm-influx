@@ -17,3 +17,6 @@ provides:
     interface: sockserver
   api:
     interface: influxdb-api
+series:
+  - xenial
+  - trusty
