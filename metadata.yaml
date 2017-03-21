@@ -1,21 +1,15 @@
 name: influxdb
 summary: Scalable Time Series DB
 maintainers:
-        - Ales Stimec <ales.stimec@canonical.com>
         - Chris MacNaughton <chris.macnaughton@canonical.com>
 description: |
-  Scalable Time Series DB for use with Grafana.
-  Derived from: cs:~alesstimec/influxdb/trusty/0
+  Scalable Time Series DB.
 tags:
-        - database
+  - database
 provides:
   admin:
     interface: http
   query:
-    interface: influxdb-http
-  datastore:
-    interface: sockserver
-  api:
     interface: influxdb-api
 series:
   - xenial
