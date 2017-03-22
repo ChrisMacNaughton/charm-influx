@@ -2,32 +2,20 @@
 
 InfluxDB is an open-source, distributed, time series database.
 
-This charm is a test and should not be used in production.
-
 # Usage
 
-Deploy the grafana charm, and the required influxDB charm with the following:
+Deploy the telegraf charm, and the required influxDB charm with the following:
 
-    juju deploy cs:~chris.macnaughton/trusty/grafana
-    juju deploy cs:~chris.macnaughton/trusty/influx
+    juju deploy telegraf
+    juju deploy cs:~chris.macnaughton/influxdb
 
 Add the relation between the two charms:
 
-    juju add-relation grafana:query influxdb:query
+    juju add-relation influxdb telegraf
 
-Expose the grafana charm:
+Expose the influxdb charm:
 
-    juju expose grafana
+    juju expose influxdb
 
-You can then access the grafana interface at the public interface shown
-from juju status. The following video shows how to generate the graph of
-the data: https://youtu.be/7HdwuOWiOEo
-
-# Feeding data into influxDB
-
-The influxDB charm currently has a static port for feeding data into grafana: 8217.
-Data should be sent on this port to the influxDB host in the following format:
-
-<metric path> <metric value> <metric timestamp>
-
-The metric path is the series you will select in grafana to graph the data.
+You can then access the influxdb interface at the public interface shown
+from juju status.
